@@ -4,7 +4,7 @@
     <div class="columns">
       <div class="column">
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Hoffmann-La_Roche_logo.svg/1200px-Hoffmann-La_Roche_logo.svg.png"
+          src="http://commons.wikimedia.org/wiki/Special:FilePath/China%20Construction%20Bank%20logo.svg"
         />
         <div>
           <b-table :data="data" :columns="columns"></b-table>
@@ -36,23 +36,26 @@ export default {
   data() {
     return {
       datacollection: null,
-      feedback: {},
       data: [
         {
-          id: "Type",
-          facts: "Pharmaceutical"
+          id: "Forbes Global 2000 Label",
+          facts: "China Construction Bank"
         },
         {
-          id: "Asset",
-          facts: "200M CHF"
+          id: "Country",
+          facts: "People's Republic of China"
         },
         {
-          id: "Revenue",
-          facts: "500M CHF"
+          id: "Assets",
+          facts: "18349489000000"
+        },
+        {
+          id: "Revenues",
+          facts: "973502000000"
         },
         {
           id: "#Employees",
-          facts: "94'442"
+          facts: "369183"
         },
         {
           id: "CEO",
@@ -73,18 +76,11 @@ export default {
       news: [
         {
           news:
-            "Antitrust reviews delay Roche's Spark deal further, but where are investors?"
-        },
-        {
-          news: "Roche übernimmt US-Biotech-Firma Promedior"
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         },
         {
           news:
-            "Roches Jungbrunnen sprudelt munter. Das Medikamentenportfolio wird sich in den kommenden Jahren erheblich verändern. Die Gewissheit, dass die Patentklippe umschifft wird, nimmt zu."
-        },
-        {
-          news:
-            "Roche says Tecentriq cocktail helps liver cancer patients live longer"
+            "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
         }
       ],
       newsHeader: [
@@ -96,7 +92,7 @@ export default {
       leaks: [
         {
           leaks:
-            "Roches' CEO wears pink socks to official Christmas dinner with key stakeholders."
+            "CEO wears pink socks to official Christmas dinner with key stakeholders."
         }
       ],
       leaksHeader: [
