@@ -10,9 +10,7 @@
           <b-table :data="data" :columns="columns"></b-table>
         </div>
       </div>
-      <div class="column">
-        <radar :chart-data="datacollection"></radar>
-      </div>
+      <div class="column"></div>
       <div class="column">
         <div>
           <b-table :data="news" :columns="newsHeader"></b-table>
@@ -22,16 +20,17 @@
         </div>
       </div>
     </div>
+    <Spider />
   </div>
 </template>
 
 <script>
-import Radar from "../components/Radar.vue";
+import Spider from "../components/Spider.vue";
 
 export default {
   name: "about",
   components: {
-    Radar
+    Spider
   },
   data() {
     return {
@@ -59,7 +58,7 @@ export default {
         },
         {
           id: "CEO",
-          facts: "Severin Schwan"
+          facts: "Wang Hongzhang"
         }
       ],
       columns: [
