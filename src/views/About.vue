@@ -1,9 +1,11 @@
 <template>
   <div class="container">
-    <h2 class="title">COMPANY NAME</h2>
+    <!-- <h2 class="title">Roche</h2> -->
     <div class="columns">
       <div class="column">
-        <img src="../assets/placeholder.png" />
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Hoffmann-La_Roche_logo.svg/1200px-Hoffmann-La_Roche_logo.svg.png"
+        />
         <div>
           <b-table :data="data" :columns="columns"></b-table>
         </div>
@@ -13,22 +15,10 @@
       </div>
       <div class="column">
         <div>
-          <b-menu>
-            <b-menu-list label="News">
-              <b-menu-item label="News Item 1"></b-menu-item>
-              <b-menu-item label="News Item 1"></b-menu-item>
-              <b-menu-item label="News Item 1"></b-menu-item>
-            </b-menu-list>
-          </b-menu>
+          <b-table :data="news" :columns="newsHeader"></b-table>
         </div>
         <div class="shift-down">
-          <b-menu>
-            <b-menu-list label="Leaks">
-              <b-menu-item label="Leak Item 1"></b-menu-item>
-              <b-menu-item label="Leak Item 1"></b-menu-item>
-              <b-menu-item label="Leak Item 1"></b-menu-item>
-            </b-menu-list>
-          </b-menu>
+          <b-table :data="leaks" :columns="leaksHeader"></b-table>
         </div>
       </div>
     </div>
@@ -49,7 +39,7 @@ export default {
       data: [
         {
           id: "Type",
-          facts: "Pfarmaceutical"
+          facts: "Pharmaceutical"
         },
         {
           id: "Asset",
@@ -61,22 +51,57 @@ export default {
         },
         {
           id: "#Employees",
-          facts: "150'000"
+          facts: "94'442"
         },
         {
           id: "CEO",
-          facts: "Pikachu"
+          facts: "Severin Schwan"
         }
       ],
       columns: [
         {
           field: "id",
-          label: "Id",
+          label: "",
           width: "40"
         },
         {
           field: "facts",
-          label: "Fact"
+          label: ""
+        }
+      ],
+      news: [
+        {
+          news:
+            "Antitrust reviews delay Roche's Spark deal further, but where are investors?"
+        },
+        {
+          news: "Roche übernimmt US-Biotech-Firma Promedior"
+        },
+        {
+          news:
+            "Roches Jungbrunnen sprudelt munter. Das Medikamentenportfolio wird sich in den kommenden Jahren erheblich verändern. Die Gewissheit, dass die Patentklippe umschifft wird, nimmt zu."
+        },
+        {
+          news:
+            "Roche says Tecentriq cocktail helps liver cancer patients live longer"
+        }
+      ],
+      newsHeader: [
+        {
+          field: "news",
+          label: "News"
+        }
+      ],
+      leaks: [
+        {
+          leaks:
+            "Roches' CEO wears pink socks to official Christmas dinner with key stakeholders."
+        }
+      ],
+      leaksHeader: [
+        {
+          field: "leaks",
+          label: "Leaks"
         }
       ]
     };
