@@ -8,9 +8,6 @@
         <b-navbar-item href="/">
           Home
         </b-navbar-item>
-        <b-navbar-item href="/about">
-          Detail
-        </b-navbar-item>
       </template>
     </b-navbar>
     <router-view />

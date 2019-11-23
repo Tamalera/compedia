@@ -17,6 +17,16 @@ export default {
         ],
         datasets: [
           {
+            label: "2017",
+            backgroundColor: "rgba(179,255,113,0.2)",
+            borderColor: "rgba(179,255,113,1)",
+            pointBackgroundColor: "rgba(179,181,198,1)",
+            pointBorderColor: "#fff",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(179,181,198,1)",
+            data: [76, 26, 93, 45, 70, 11, 35]
+          },
+          {
             label: "2018",
             backgroundColor: "rgba(179,181,255,0.2)",
             borderColor: "rgba(179,181,255,1)",
