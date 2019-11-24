@@ -4,13 +4,16 @@ Small project for Wikidata Hackathon Zürich 2019.
 Create Corpedia, a webpage taking wikidata to display the 100 biggest companies, facts, news and leaks about them.
 
 ## Prerequisites
-- NodeJS
+- Node
 - NPM
 
 ## Uses
 - VueJS 2
-- Charts JS
+- Axios
 - Buefy
+- ChartsJS
+- Vue CountryFlag
+- Vue-d3-Cloud
 
 ## Project setup
 ```
