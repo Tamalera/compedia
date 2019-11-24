@@ -10,31 +10,46 @@
           <b-table :data="data" :columns="columns"></b-table>
         </div>
       </div>
-      <div class="column"></div>
       <div class="column">
-        <div>
-          <b-table :data="news" :columns="newsHeader"></b-table>
-        </div>
-        <div class="shift-down">
-          <b-table :data="leaks" :columns="leaksHeader"></b-table>
-        </div>
+        <cloud :data="words" :fontSizeMapper="fontSizeMapper" />
       </div>
     </div>
-    <Spider />
+    <div class="columns">
+      <div class="column">
+        <b-table :data="news" :columns="newsHeader"></b-table>
+      </div>
+      <div class="column">
+        <b-table :data="leaks" :columns="leaksHeader"></b-table>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import Spider from "../components/Spider.vue";
+import Cloud from "vue-d3-cloud";
 
 export default {
   name: "about",
   components: {
-    Spider
+    Cloud
   },
   data() {
     return {
       datacollection: null,
+      words: [
+        { text: "China", value: 20 },
+        { text: "Bank", value: 30 },
+        { text: "Money", value: 40 },
+        { text: "Wang Hongzhang", value: 100 },
+        { text: "Trust", value: 9 },
+        { text: "rich", value: 53 },
+        { text: "Inverstment", value: 22 },
+        { text: "commerce", value: 12 },
+        { text: "power", value: 67 },
+        { text: "spend", value: 42 },
+        { text: "lunch", value: 12 }
+      ],
+      fontSizeMapper: word => Math.log2(word.value) * 18,
       data: [
         {
           id: "Forbes Global 2000 Label",
