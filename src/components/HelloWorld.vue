@@ -8,11 +8,13 @@
       >Search</b-button
     >
     <div>
-      <ul>
+      <ol class="gradient-list">
         <li v-for="qCode in qCodes" :key="qCode['id']">
-          <a @click="goToCompanyPage(qCode['id'])">ID {{ qCode["id"] }}</a>
+          <router-link :to="{ name: 'about', params: { id: qCode['id'] } }"
+            >ID {{ qCode["id"] }}</router-link
+          >
         </li>
-      </ul>
+      </ol>
     </div>
   </div>
 </template>
@@ -44,4 +46,62 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+$white: #fafafa;
+
+/*** EXTEND ***/
+/* box-shadow */
+%boxshadow {
+  box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.05),
+    0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
+}
+
+/*** STYLE ***/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $white;
+}
+
+main {
+  display: block;
+  margin: 0 auto;
+  max-width: 40rem;
+  padding: 1rem;
+}
+
+ol.gradient-list {
+  counter-reset: gradient-counter;
+  list-style: none;
+  margin: 1.75rem 0;
+  padding-left: 1rem;
+  > li {
+    background: white;
+    border-radius: 0 0.5rem 0.5rem 0.5rem;
+    @extend %boxshadow;
+    counter-increment: gradient-counter;
+    margin-top: 1rem;
+    min-height: 3rem;
+    padding: 1rem 1rem 1rem 3rem;
+    position: relative;
+    &::before,
+    &::after {
+      border-radius: 1rem 1rem 0 1rem;
+      content: "";
+      height: 3rem;
+      left: -1rem;
+      overflow: hidden;
+    }
+  }
+}
+</style>
