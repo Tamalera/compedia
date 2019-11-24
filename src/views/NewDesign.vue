@@ -102,6 +102,10 @@ export default {
           Qids.push(Qid);
         });
 
+        console.log(response.data);
+        const company_name =
+          response.data.claims.P373[0].mainsnak.datavalue.value;
+
         axios
           .get(
             "https://www.wikidata.org/w/api.php?action=wbgetentities&ids=" +
@@ -124,7 +128,7 @@ export default {
 
             let subsidiary_tree = {
               id: "1",
-              name: "Roche",
+              name: company_name,
               children: leaves
             };
 
