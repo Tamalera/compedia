@@ -9,7 +9,9 @@
     >
     <div>
       <ul>
-        <li v-for="qCode in qCodes" :key="qCode['id']">ID {{ qCode["id"] }}</li>
+        <li v-for="qCode in qCodes" :key="qCode['id']">
+          <a @click="goToCompanyPage(qCode['id'])">ID {{ qCode["id"] }}</a>
+        </li>
       </ul>
     </div>
   </div>

@@ -14,4 +14,9 @@
   </div>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+table td,
+table th {
+  text-align: center !important;
+}
+</style>
