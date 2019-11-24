@@ -46,10 +46,9 @@ export default {
         { text: "investment", value: 22 },
         { text: "commerce", value: 12 },
         { text: "power", value: 67 },
-        { text: "spend", value: 42 },
-        { text: "lunch", value: 12 }
+        { text: "spend", value: 42 }
       ],
-      fontSizeMapper: word => Math.log2(word.value) * 18,
+      fontSizeMapper: word => Math.log2(word.value) * 12,
       data: [
         {
           id: "Forbes Global 2000 Label",
